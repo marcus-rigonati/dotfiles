@@ -27,6 +27,7 @@
   "mini.ai": { "branch": "main", "commit": "4511b3481707c1d021485475d34f2ed2a50bf47b" },
   "mini.icons": { "branch": "main", "commit": "d48ad47359218d2b019034f95f601b3861180885" },
   "mini.pairs": { "branch": "main", "commit": "30cf2f01c4aaa2033db67376b9924fa2442c05d6" },
+  "mini.surround": { "branch": "main", "commit": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18" },
   "monokai-pro.nvim": { "branch": "master", "commit": "a68e38b8e55d69a215d0f02598900a79c356da9d" },
   "neo-tree.nvim": { "branch": "main", "commit": "1b4c40051f2623d0a7dcf19d5b74b997b97b0a9a" },
   "noice.nvim": { "branch": "main", "commit": "7bfd942445fb63089b59f97ca487d605e715f155" },
