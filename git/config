@@ -6,6 +6,7 @@
 	st = status
 	ck = checkout
 	amendNoEdit = commit --amend --no-edit
+	reset1 = reset HEAD~1
 [init]
 	defaultBranch = master
 [pull]
