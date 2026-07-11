@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Useful keymaps
+-- <space>wd - close split/window
+
 local map = vim.keymap.set
 -- local all_modes = { "n", "i", "v", "x", "s", "o", "c", "t" }
 
@@ -16,9 +19,15 @@ map("n", "<A-h>", "[b", { remap = true })
 map("n", "<A-l>", "]b", { remap = true })
 map("n", "<C-b>", "gd")
 map("v", "<C-c>", '"+y', { desc = "Copy to system clipboard" })
+map("n", "<A-[>", "<C-o>")
+map("n", "<A-]>", "<C-i>")
+map({ "n", "x", "i" }, "<A-j>", "<Esc>", { desc = "Exit insert mode" })
+map({ "n", "x", "i" }, "<C-j>", "<Esc>", { desc = "Exit insert mode" })
 
--- map("n", "<C-[>", "[b", { remap = true }) -- It should move caret back
--- map("n", "<C-]>", "]b", { remap = true }) -- It should move caret forward
+local operator_rhs = function()
+  return require("vim._comment").operator() .. "_"
+end
+map({ "n", "x" }, "<C-;>", operator_rhs, { expr = true }) -- Toggle Comment
 
 require("keymaps.source_list")
 require("keymaps.git_menu")
