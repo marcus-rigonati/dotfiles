@@ -27,6 +27,8 @@
     "custom/screenrecording-indicator"
   ],
   "modules-right": [
+    "wlr/taskbar",
+    "custom/separator",
     "group/tray-expander",
     "custom/separator",
     "idle_inhibitor",
@@ -236,5 +238,10 @@
     "signal": 8,
     "return-type": "json"
   },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 15,
+    "tooltip-format": "{title}",
+  }
   
 }

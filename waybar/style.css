@@ -134,6 +134,10 @@ button:hover {
   margin: 1px 3px 1px 3px;
 }
 
+#custom-layout {
+  margin-left: 5px
+}
+
 #custom-ddc_brightness {
     /* Add your preferred background color here, e.g., #90b1b1 */
     padding: 0 3px;
@@ -287,3 +291,12 @@ animation: repeat;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+#taskbar {
+    padding: 0 8px;
+}
+
+#taskbar button {
+    padding: 0 3px;
+}
+
