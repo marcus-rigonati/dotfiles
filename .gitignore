@@ -35,7 +35,12 @@ mise/
 mozilla/
 obsidian/
 omarchy.ttf
-omarchy/
+omarchy/branding/*
+omarchy/extensions/*
+omarchy/hooks/*
+omarchy/plugins/*
+omarchy/themed/*
+omarchy/themes/*
 opencode/
 pulse/
 qalculate/
