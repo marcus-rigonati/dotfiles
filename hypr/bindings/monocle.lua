@@ -1,6 +1,6 @@
 local layout_utils = require("bindings.layout-utils")
 
-o.bind("SUPER + M", "TODO", function()
+o.bind("SUPER + M", "Swap between Monocle and Master layouts", function()
 	local current_layout = layout_utils.get_workspace_layout()
 
 	local target_layout_values = { layout = "monocle", border_color = "rgb(ff6666)" }
