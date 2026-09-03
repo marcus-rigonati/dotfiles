@@ -28,6 +28,8 @@
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
+local layout_utils = require("bindings.layout-utils")
+
 -- Unbindings
 hl.unbind("SUPER + l")
 hl.unbind("SUPER + j")
@@ -50,6 +52,29 @@ hl.unbind("SUPER + COMMA")
 
 require("hypr.bindings.monocle")
 require("hypr.bindings.applications")
+
+-- Scrolling layout - TODO extract these to another file
+-- TODO make the string "scrolling" and "master" global variables (and their colors) or something like that
+o.bind("SUPER + N", "Swap Between Scrolling and Master layouts", function()
+	local current_layout = layout_utils.get_workspace_layout()
+
+	local target_layout_values = { layout = "scrolling", border_color = "rgb(009900)" }
+	if current_layout == "scrolling" then
+		target_layout_values = { layout = "master", border_color = "rgb(89b4fa)" }
+	end
+
+	layout_utils.change_layout(target_layout_values.layout, target_layout_values.border_color)
+end)
+o.bind("SUPER + PERIOD", "TODO", function()
+	if layout_utils.get_workspace_layout() == "scrolling" then
+		hl.dispatch(hl.dsp.layout("colresize +conf"))
+	end
+end)
+o.bind("SUPER + COMMA", "TODO", function()
+	if layout_utils.get_workspace_layout() == "scrolling" then
+		hl.dispatch(hl.dsp.layout("colresize -conf"))
+	end
+end)
 
 -- Virtual Workspaces Movement
 o.bind("SUPER + page_up", "Previous workspace", hl.dsp.focus({ workspace = "-1" }))
