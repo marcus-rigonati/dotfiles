@@ -4,6 +4,9 @@
 
 -- Useful keymaps
 -- <space>wd - close split/window
+-- open file in split: ":vsplit file-name"
+--    or <space><space> search for the file and then
+--    <C-v> or <C-x> for vertical or horizontal
 
 local map = vim.keymap.set
 -- local all_modes = { "n", "i", "v", "x", "s", "o", "c", "t" }
