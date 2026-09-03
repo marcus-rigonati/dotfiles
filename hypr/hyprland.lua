@@ -10,6 +10,14 @@ dofile((os.getenv("OMARCHY_PATH") or "/usr/share/omarchy") .. "/default/hypr/boo
 -- keeping core window-manager bindings:
 -- omarchy_preinstalled_bindings = false
 
+-- Global variables
+MASTER_LAYOUT = "master"
+MONOCLE_LAYOUT = "monocle"
+SCROLLING_LAYOUT = "scrolling"
+MASTER_LAYOUT_BORDER_COLOR = "rgb(89b4fa)"
+SCROLLING_LAYOUT_BORDER_COLOR = "rgb(009900)"
+MONOCLE_LAYOUT_BORDER_COLOR = "rgb(ff6666)"
+
 -- Load Omarchy defaults.
 require("default.hypr.omarchy")
 
