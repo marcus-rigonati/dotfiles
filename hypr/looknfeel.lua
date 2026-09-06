@@ -50,7 +50,7 @@ hl.animation({
 	enabled = true,
 	speed = 6,
 	bezier = "myBezier",
-	style = "slide",
+	style = "slidevert",
 })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#layout
