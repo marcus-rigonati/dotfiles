@@ -15,7 +15,7 @@ function layout.change_layout(target_layout, border_color)
 		return
 	end
 
-	hl.workspace_rule({ workspace = tostring(active_workspace.id), layout = target_layout })
+	hl.config({ general = { layout = target_layout } })
 
 	-- Change border color only if it was especified
 	if border_color ~= nil then
