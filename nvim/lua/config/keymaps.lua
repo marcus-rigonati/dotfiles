@@ -26,12 +26,23 @@ end
 map("v", "<C-c>", copyToClipboard, { desc = "Copy to system clipboard" })
 
 -- Cursor Navigation
+local diagnostic_goto = function(next, severity)
+  return function()
+    vim.diagnostic.jump({
+      count = (next and 1 or -1) * vim.v.count1,
+      severity = severity and vim.diagnostic.severity[severity] or nil,
+      float = true,
+    })
+  end
+end
 map("n", "<A-[>", "<C-o>")
 map("n", "<A-]>", "<C-i>")
 map({ "n", "x" }, "H", "^")
 map("n", "J", "<C-d>zz", { remap = true })
 map("n", "K", "<C-u>zz", { remap = false })
 map({ "n", "x" }, "L", "g_")
+map("n", "<F2>", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+map("n", "<S-F2>", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 
 -- Esc
 map({ "n", "v", "i" }, "<A-j>", "<Esc>", { desc = "Go to Normal mode" })
