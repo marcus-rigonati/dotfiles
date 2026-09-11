@@ -79,3 +79,4 @@ o.bind("SUPER + W", "Show key bindings", hl.dsp.exec_cmd("omarchy-menu-keybindin
 o.bind("SUPER + F", "Toggle window floating/tiling", hl.dsp.window.float({ action = "toggle" }))
 o.bind("SUPER + SHIFT + F", "Toggle fullscreen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 o.bind("ALT + SHIFT + 5", "Screenshot", "omarchy capture screenshot")
+o.bind("SUPER + E", "File Manager", "nautilus ~/Downloads/")
