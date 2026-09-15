@@ -4,11 +4,6 @@
     "layout": {
       "center": [
         {
-          "id": "omarchy.indicators",
-          "alwaysShow": true,
-          "items": ["ScreenRecording", "Reminder", "NightLight", "Dnd", "StayAwake"]
-        },
-        {
           "id": "omarchy.clock",
           "format": "dd.MM dddd  HH:mm",
           "formatAlt": "d MMMM 'W'ww yyyy",
@@ -32,6 +27,17 @@
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "omarchy.indicators",
+          "alwaysShow": true,
+          "items": [
+            "ScreenRecording",
+            "Reminder",
+            "NightLight",
+            "Dnd",
+            "StayAwake"
+          ]
         },
         {
           "id": "omarchy.tailscale"
